@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="Styles/login.css">
+</head>
+<body>
+
+
+  <div class="form-container">
+    <h2>Login Form</h2>
+
+    <form action="login.php" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+        <div class="forgot-password">
+    <a href="forgot_password.html">Forgot Password?</a>
+  </div>
+
+    <div class="checkbox-wrapper">
+  <input id="remember-me" name="remember_me" type="checkbox">
+  <label class="terms-label" for="remember-me">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" class="checkbox-svg">
+      <mask fill="white" id="path-1-inside-1_476_5-37">
+        <rect height="200" width="200"></rect>
+      </mask>
+      <rect mask="url(#path-1-inside-1_476_5-37)" stroke-width="40" class="checkbox-box" height="200" width="200"></rect>
+      <path stroke-width="15" d="M52 111.018L76.9867 136L149 64" class="checkbox-tick"></path>
+    </svg>
+    <span class="label-text">Remember Me</span>
+  </label>
+</div>
+
+
+      <button class="submit"><span>Login</span></button>
+      <p class="login-prompt">Don't have an account? <a href="RegisterForm.html">Register here</a>.</p>
+
+      <p id="error-message" class="error-message" style="color:red; text-align:center;"></p>
+    </form>
+  </div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const errorMsg = document.getElementById('error-message');
+
+    if (urlParams.get('error') === 'invalid') {
+      errorMsg.innerText = "❌ Incorrect username or password.";
+    } else if (urlParams.get('error') === 'empty') {
+      errorMsg.innerText = "❗ Please fill in all fields.";
+    } else if (urlParams.get('registered') === 'success') {
+      errorMsg.style.color = "green";
+      errorMsg.innerText = "✅ Registration successful! Please log in.";
+    }
+  </script>
+
+</body>
+</html>
