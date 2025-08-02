@@ -1,0 +1,91 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 40px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcome-message {
+  font-size: 1.2em;
+  color: #ffeb3b;
+}
+
+.music-library {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+}
+
+.song-list li {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+audio {
+  width: 250px;
+}
+
+.logout-container {
+  text-align: right;
+  margin: 10px 20px;
+}
+
+.logout-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+}
+
+/* 🌟 Particle container */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* ✨ Particle style */
+.particle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+}

@@ -1,0 +1,108 @@
+body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #33ccff 0%, #3366ff 100%);
+      padding: 200px;
+  background-color: #313131;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px
+    }
+  
+
+    .form-container {
+      background: linear-gradient(to bottom, #ffffff 0%, #ccccff 100%);
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .submit {
+ width: 165px;
+  height: 62px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 1rem;
+  border: none;
+  position: relative;
+  background: #100720;
+  transition: 0.1s;
+  margin-top: 15px;
+ margin-left: 125px;
+ 
+}
+
+.submit {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 1.25em;
+  cursor: pointer;
+  margin-left: 122px;
+}
+
+.submit span {
+  position: relative;
+  z-index: 1;
+}
+
+.submit::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #272727;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.submit:hover::before {
+  opacity: 0.7;
+}
+
+.submit::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.submit:hover:after {
+  opacity: 1;
+}
+
+ 
+    .login-prompt {
+      text-align: center;
+      margin-top: 15px;
+    }
